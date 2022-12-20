@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'TT Travels';
+    font-weight: 400;
+    src: url('/fonts/TTTravels-Regular.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TT Travels';
+    font-weight: 500;
+    src: url('/fonts/TTTravels-Medium.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TT Travels';
+    font-weight: 600;
+    src: url('/fonts/TTTravels-DemiBold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TT Travels';
+    font-weight: 700;
+    src: url('/fonts/TTTravels-Bold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'TT Travels';
+    font-weight: 800;
+    src: url('/fonts/TTTravels-ExtraBold.ttf') format('truetype');
+  }
+}
+
+body {
+  @apply font-tt-travels bg-eigengrau text-white scroll-smooth m-0;
+}
+
+::-webkit-scrollbar {
+  @apply w-0;
+}
+
+@layer components {
+  .bg-primary {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .hero-image {
+    background-image: url('/home-page/bg-elements/Background.png');
+    @apply bg-no-repeat absolute w-screen h-screen top-0 left-0 -z-10;
+  }
+
+  .spiral-bg {
+    background-image: url('/home-page/bg-elements/Spiral.png');
+    @apply bg-no-repeat absolute w-[524px] h-[616px] bottom-0 right-0 -z-10;
+  }
+
+  .cast-details-image {
+    background-image: url('/cast-details/Background.png');
+    @apply bg-no-repeat absolute w-screen h-full top-0 left-0 -z-10;
+  }
+
+  .cast-box {
+    clip-path: polygon(0 0, 100% 0, 100% 84%, 73% 100%, 0 100%);
+    @apply border border-turquoise rounded-lg w-[290px] relative p-4 pb-0;
+  }
+
+  .star-image {
+    background-image: url('/cast-details/Star.png');
+    @apply bg-no-repeat absolute w-screen h-[644px] bottom-0 left-0 -z-10;
+  }
+
+  .text-stroke {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px;
+    writing-mode: vertical-rl;
+    @apply rotate-180 absolute left-[100px] inset-0 m-auto bottom-0;
+  }
+}
